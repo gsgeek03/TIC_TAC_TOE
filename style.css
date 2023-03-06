@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Tilt+Neon&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+    width:100%;
+    background-color: rgb(2, 2, 49);
+    color:rgb(196, 82, 48);
+    text-align: center;
+    height: 50px;
+}
+.title i{
+    font-size: 3rem;
+    transition: all ease-in-out 0.5s;
+}
+.title :first-child{margin-right: 5px;}
+.title i:hover{
+    font-size: 3.5rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.container{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3,8vw);
+    grid-template-rows: repeat(3,8vw);
+    font-family: 'Roboto',sans-serif;
+    transition: ;
+}
+
+.game_info{
+    margin: 20px 0;
+    text-align:center;
+    font-family: 'Tilt Neon', cursive;
+}
+.button{width: 100; text-align: center;}
+.button #reset{
+    margin-top: 20px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 5vmax;
+    font-family: 'Tilt Neon', cursive;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 3px 2px black;
+    transition: all ease-in-out 0.1s;
+    border: 1px solid black;
+}
+#reset:hover{
+    border: 2px solid black;
+    box-shadow: 3px 2px rgb(43, 39, 39);
+    background-color: ;
+}
+.box{
+    border: 2px solid black;
+    font-size: 6.5vw;
+    transition: all ease-in-out 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(101, 252, 252);
+    cursor: pointer;
+    font-size: 7vw;
+}
+.bt{
+    border-top: 0;
+}
+.br{
+    border-right: 0;
+}
+.bl{
+    border-left: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+@media screen and (max-width:600px) {
+    .main{
+        width:90%;
+    }
+    .container{
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(3,25vw);
+        grid-template-rows: repeat(3,25vw);
+    }
+    .box{
+        font-size:15vw
+    }
+    .box:hover{
+        background-color: rgb(101, 252, 252);
+        cursor: pointer;
+        font-size: 17vw;
+    }
+}
+@media screen and (max-height:500px) and (max-width:1000px) {
+    .main{
+        flex-direction: row;
+    }
+}
