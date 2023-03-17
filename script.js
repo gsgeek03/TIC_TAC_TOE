@@ -29,8 +29,9 @@ let x=new Audio("beep1.wav");
     ]
     wins.forEach(e=>{
         if((boxtext[e[0]].innerText===boxtext[e[1]].innerText) && (boxtext[e[1]].innerText===boxtext[e[2]].innerText) && (boxtext[e[0]].innerText!=="")){
-            document.querySelector(".result").innerText=boxtext[e[0]].innerText+" Won ";
+            document.querySelector(".result").innerText=boxtext[e[0]].innerText+" Won. Press reset to play again";
             gameOver=true;
+            document.querySelector('.container').style["pointer-events"]="none";
         }
     })
  }
@@ -62,4 +63,5 @@ let x=new Audio("beep1.wav");
     turn = "X"; 
     isgameover = false;
     document.querySelector(".result").innerText="Turn for "+turn;
+    document.querySelector('.container').style["pointer-events"]= "all";
 })
